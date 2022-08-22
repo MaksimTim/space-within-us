@@ -1,28 +1,26 @@
-import React, { useState } from "react";
-import {apiKey, useCuriosityInfoQuery} from "../store/nasa/nasa.api";
+import React from "react";
+import RoverItem from "../components/Rover/RoverItem";
+import CuriosityImg from "../assets/img/Curiosity.png";
+import OpportunityImg from "../assets/img/Opportunity.png";
+import SpiritImg from "../assets/img/Spirit.png";
+import {IRoverObj} from "../models/models";
 
-const RoversPage = () => {
-  const [value, setValue] = useState("");
-const {isLoading, isError, data} = useCuriosityInfoQuery(value)
-    console.log(data)
+const rovers: IRoverObj[] = [
+  { name: "curiosity", image: CuriosityImg },
+  { name: "opportunity", image: OpportunityImg },
+  { name: "spirit", image: SpiritImg },
+];
 
+const RoversPage: React.FC = () => {
   return (
-    <div className="grid justify-items-center p-2 m-10 border-2 rounded-md shadow-md">
-      Выбери дату:
-      <input
-        className={"border-blue-500"}
-        type={"date"}
-        name={"date-rover"}
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
-        min={"2014-01-01"}
-        max={"2019-01-01"}
-      />
-      <div>
-
-      </div>
+    <div className="flex flex-wrap p-2 m-10 border-2 rounded-md shadow-md">
+      {rovers.map((roverObj, i) => (
+        <RoverItem key={i} name={roverObj.name} image={roverObj.image} />
+      ))}
     </div>
   );
 };
+
+
 
 export default RoversPage;

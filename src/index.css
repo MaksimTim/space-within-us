@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', Roboto, Tahoma,sans-serif;
+}

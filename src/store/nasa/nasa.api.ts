@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import {IPicOfTheDay, RoverResponse} from "../../models/models";
+import {IPicOfTheDay, IRover, Photo, RoverPhotoRes, RoverResponse} from "../../models/models";
 
 export const apiKey = 'lSBSduqJZsO7iSkptn1hLax8QAFrkfIl0CWxOSfm'
 
@@ -17,16 +17,26 @@ export const nasaApi = createApi({
         }
       }),
     }),
-    curiosityInfo: build.query<RoverResponse, string>({
-      query: (earthDate: string) => ({
-        url: `mars-photos/api/v1/rovers/curiosity`,
+    getRoverInfo: build.query<IRover, string>({
+      query: (roverName) => ({
+        url: `mars-photos/api/v1/rovers/${roverName}`,
         params: {
-          earth_date: earthDate,
           api_key: apiKey,
         }
       }),
+      transformResponse: (response: RoverResponse) => response.rover
+    }),
+    getRoverPhotos: build.query<Photo[], any>({
+      query: (rovParams) => ({
+        url: `mars-photos/api/v1/rovers/${rovParams.name}/photos`,
+        params: {
+          earth_date: rovParams.value,
+          api_key: apiKey
+        }
+      }),
+      transformResponse: (response: RoverPhotoRes) => response.photos
     }),
   }),
 });
 
-export const { usePicOfTheDayQuery, useCuriosityInfoQuery } = nasaApi;
+export const { usePicOfTheDayQuery, useGetRoverInfoQuery, useGetRoverPhotosQuery } = nasaApi;
