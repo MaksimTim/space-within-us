@@ -63,3 +63,4 @@ export interface Photo {
 export interface RoverPhotoRes {
     photos: Photo[];
 }
+

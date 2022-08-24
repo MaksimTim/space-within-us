@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import PhotosPage from "./pages/PhotosPage";
 import Header from "./components/Header/Header";
 import RoversPage from "./pages/RoversPage";
 import RoverPhotoPage from "./pages/RoverPhotoPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         <Routes>
           <Route path={"/"} element={<HomePage />} />
 
-          <Route path={"/photos"} element={<PhotosPage />} />
+          <Route path={"/projects"} element={<ProjectsPage />} />
           <Route path={"/rovers"} element={<RoversPage />} />
           <Route path={"/rovers/:name"} element={<RoverPhotoPage />} />
           {/*<Route path={'/books'} element={}/>

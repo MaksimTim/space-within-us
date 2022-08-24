@@ -6,9 +6,9 @@ import SpiritImg from "../assets/img/Spirit.png";
 import {IRoverObj} from "../models/models";
 
 const rovers: IRoverObj[] = [
-  { name: "curiosity", image: CuriosityImg },
-  { name: "opportunity", image: OpportunityImg },
-  { name: "spirit", image: SpiritImg },
+  { name: "Curiosity", image: CuriosityImg },
+  { name: "Opportunity", image: OpportunityImg },
+  { name: "Spirit", image: SpiritImg },
 ];
 
 const RoversPage: React.FC = () => {

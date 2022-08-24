@@ -19,9 +19,9 @@ const Header: React.FC = () => {
       <Link
         className={active === 2 ? styles.active : ""}
         onClick={() => setActive(2)}
-        to={"/photos"}
+        to={"/projects"}
       >
-        Фото
+        Проекты NASA
       </Link>
       <Link
         className={active === 3 ? styles.active : ""}
