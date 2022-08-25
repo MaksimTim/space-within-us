@@ -344,10 +344,13 @@ export interface LeadOrganization {
     acronym: string;
     fax: string;
     isActive: boolean;
+    city: string;
+    stateTerritory: StateTerritory;
     location: Location3;
     locationId: number;
     organizationName: string;
     organizationType: OrganizationType3;
+    organizationTypePretty: string;
     organizationTypeId: number;
     parentOrganizationId: number;
     phone: string;
@@ -436,10 +439,13 @@ export interface SupportingOrganization {
     acronym: string;
     fax: string;
     isActive: boolean;
+    city: string;
+    stateTerritory: StateTerritory;
     location: Location4;
     locationId: number;
     organizationName: string;
     organizationType: OrganizationType4;
+    organizationTypePretty: string;
     organizationTypeId: number;
     parentOrganizationId: number;
     phone: string;
@@ -1539,6 +1545,21 @@ export interface PrimaryImage {
     publishedDateString: string;
     publishedBy: string;
 }
+
+export interface Country {
+    abbreviation: string;
+    countryId: number;
+    name: string;
+}
+
+export interface StateTerritory {
+    abbreviation: string;
+    country: Country;
+    countryId: number;
+    name: string;
+    stateTerritoryId: number;
+}
+
 
 export interface IProject {
     projectId: number;

@@ -1,0 +1,20 @@
+.body {
+    @apply flex-auto border-2 rounded-md shadow-md mx-2 my-2;
+}
+.header {
+    @apply text-center text-2xl bg-blue-500 rounded-lg shadow-md text-white py-1 px-2.5 m-1;
+}
+
+
+.heading {
+    @apply font-thin p-1 indent-8 px-2
+}
+
+.management {
+    @apply font-thin p-1 indent-8 bg-slate-200;
+
+    a {
+        @apply text-xl text-blue-900 no-underline hover:underline;
+    }
+
+}

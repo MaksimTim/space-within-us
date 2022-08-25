@@ -9,7 +9,6 @@ const ProjectsPage = () => {
   const debounced = useDebounce(search);
   const {
     isLoading,
-    isError,
     data: projects,
   } = useSearchProjectsQuery(debounced, {
     skip: debounced.length < 2,
