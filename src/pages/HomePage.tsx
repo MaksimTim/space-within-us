@@ -2,6 +2,7 @@ import React from "react";
 import { usePicOfTheDayQuery } from "../store/nasa/nasa.api";
 
 const HomePage: React.FC = () => {
+
   const { isLoading, isError, data } = usePicOfTheDayQuery();
 
     if (isLoading) {

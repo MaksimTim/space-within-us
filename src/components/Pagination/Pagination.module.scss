@@ -1,0 +1,37 @@
+.root {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+
+
+    a {
+      text-align: center;
+      width: 45px;
+      height: 45px;
+      padding: 10px;
+      border: 1px solid cornflowerblue;
+      border-radius: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+      color: cornflowerblue;
+
+      &:hover {
+        background-color: cornflowerblue;
+        color: white;
+      }
+    }
+  }
+
+  :global {
+    .selected {
+      a {
+        background-color: cornflowerblue;
+        color: white;
+      }
+    }
+  }
+}
