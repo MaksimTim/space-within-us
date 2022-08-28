@@ -16,7 +16,7 @@ const About = () => {
         <div className="font-bold text-center">My stack:</div>
         <ul>
           <li>JavaScript, TypeScript</li>
-          <li>React JS</li>
+          <li>React</li>
           <li>Redux ToolKit (RTK Query)</li>
           <li>CSS (sass)</li>
           <li>Tailwind CSS</li>
