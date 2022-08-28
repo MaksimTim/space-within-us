@@ -32,6 +32,7 @@ const ProjectsPage = () => {
         открыть для себя технологии, над которыми НАСА работает каждый день,
         чтобы исследовать космос, понимать вселенную и улучшать аэронавтику.
       </div>
+
       <div className="relative w-[500px]">
         <input
           type="text"
@@ -55,6 +56,7 @@ const ProjectsPage = () => {
           </ul>
         )}
       </div>
+      <div className='text-gray-500'>*могут открыться не все проекты. API Nasa с ошибками.</div>
       <div className='py-4 px-2'>
         {isLoadProj && <p className="text-2xl text-center">Loading project...</p>}
         {isErrorProj && <p className="text-2xl text-center text-red-600">Some error...</p>}

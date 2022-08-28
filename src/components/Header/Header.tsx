@@ -57,7 +57,7 @@ const Header: React.FC = () => {
         onClick={() => setActive(7)}
         to={"/about"}
       >
-        Ещё что-нибудь
+        About me
       </Link>
     </div>
   );

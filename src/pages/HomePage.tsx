@@ -14,8 +14,8 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="grid justify-items-center p-2 m-10 border-2 rounded-md shadow-md">
-      <div className="font-bold">Фото дня!</div>
-      <div className="text-2xl bg-blue-500 rounded-lg shadow-md text-white py-1 px-2.5 m-1">
+      <div className="text-2xl bg-blue-500 rounded-lg shadow-md text-white py-1 px-2.5 m-1">Медиа дня!</div>
+      <div className="text-xl font-bold my-1">
         {data?.title}
       </div>
       {data?.media_type === "video" && (
